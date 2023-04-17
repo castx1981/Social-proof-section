@@ -7,29 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-      tailwind.config = {
-          theme: {
-              fontFamily: {
-                  'sans': ['League Spartan', 'sans-serif'],
-              },
-              extend: {
-                  colors: {
-                      // primary
-                      'very-dark-magenta': 'hsl(300, 43%, 22%)',
-                      'soft-pink': 'hsl(333, 80%, 67%)',
-                      // neutral
-                      'dark-grayish-magenta': 'hsl(303, 10%, 53%)',
-                      'light-grayish-magenta': 'hsl(300, 24%, 96%)',
-                  },
-              }
-          },
-      }
-  </script>
+  <link href="style.css" rel="stylesheet">
   <title>Frontend Mentor | Social proof section</title>
 </head>
-<body class="flex items-start justify-center min-h-screen bg-white">
+<body class="flex items-start justify-center min-h-screen mobile-body-bg xl:desktop-body-bg">
 <div class="w-[375px] px-6 py-10 flex flex-col xl:p-0 xl:mx-auto xl:mt-32 xl:w-[72rem] xl:flex-row xl:flex-wrap">
   <!-- slogan area -->
   <div class="mt-10 flex flex-col xl:m-0 xl:flex-grow-0 xl:flex-shrink-1 xl:basis-4/12">
