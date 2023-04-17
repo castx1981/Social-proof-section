@@ -1,61 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Social proof section</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+          theme: {
+              fontFamily: {
+                  'sans': ['League Spartan', 'sans-serif'],
+              },
+              extend: {
+                  colors: {
+                      // primary
+                      'very-dark-magenta': 'hsl(300, 43%, 22%)',
+                      'soft-pink': 'hsl(333, 80%, 67%)',
+                      // neutral
+                      'dark-grayish-magenta': 'hsl(303, 10%, 53%)',
+                      'light-grayish-magenta': 'hsl(300, 24%, 96%)',
+                  },
+                  width: {
+                      'mobile': '375px',
+                  },
+              }
+          },
       }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    10,000+ of our users love our products.
-
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+  </script>
+  <title>Frontend Mentor | Social proof section</title>
+</head>
+<body class="flex items-start justify-center min-h-screen bg-white">
+<div class="w-[375px] px-6 py-10 flex flex-col">
+  <!-- slogan area -->
+  <div class="mt-10 flex flex-col">
+    <h1 class="px-9 font-bold text-[40px] leading-8 tracking-tighter text-very-dark-magenta text-center">
+      10,000+ of our users love our products.
+    </h1>
+    <p class="mt-7 text-lg leading-6 -tracking-[.009em] text-dark-grayish-magenta text-center">
+      We only provide great products combined with excellent customer service.
+      See what our satisfied customers are saying about our services.
+    </p>
+  </div>
+  <!-- ratings area -->
+  <div class="mt-10 flex flex-col space-y-4">
+    <div class="py-4 flex flex-col items-center space-y-4 bg-light-grayish-magenta rounded-xl">
+      <div class="flex space-x-2">
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+      </div>
+      <p class="font-bold text-lg leading-3 text-very-dark-magenta">
+        Rated 5 Stars in Reviews
+      </p>
     </div>
-  </body>
+    <div class="py-4 flex flex-col items-center space-y-4 bg-light-grayish-magenta rounded-xl">
+      <div class="flex space-x-2">
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+      </div>
+      <p class="font-bold text-lg leading-3 text-very-dark-magenta">
+        Rated 5 Stars in Report Guru
+      </p>
+    </div>
+    <div class="py-4 flex flex-col items-center space-y-4 bg-light-grayish-magenta rounded-xl">
+      <div class="flex space-x-2">
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+        <img src="images/icon-star.svg" alt=""/>
+      </div>
+      <p class="font-bold text-lg leading-3 text-very-dark-magenta">
+        Rated 5 Stars in BestTech
+      </p>
+    </div>
+  </div>
+  <!-- reviews area -->
+  <div class="mt-14 flex flex-col space-y-5">
+    <div class="p-8 bg-very-dark-magenta rounded-lg">
+      <div class="flex items-center space-x-6">
+        <img class="rounded-full w-10 h-10" src="images/image-colton.jpg" alt=""/>
+        <div class="leading-5">
+          <p class="text-white">Colton Smith</p>
+          <p class="mt-0.5 text-soft-pink/80">Verified Buyer</p>
+        </div>
+      </div>
+      <q class="block mt-7 text-white leading-snug">
+        We needed the same printed design as the one we had ordered a week prior.
+        Not only did they find the original order, but we also received it in time.
+        Excellent!
+      </q>
+    </div>
+    <div class="p-8 bg-very-dark-magenta rounded-lg">
+      <div class="flex items-center space-x-6">
+        <img class="rounded-full w-10 h-10" src="images/image-irene.jpg" alt=""/>
+        <div class="leading-5">
+          <p class="text-white">Irene Roberts</p>
+          <p class="mt-0.5 text-soft-pink/80">Verified Buyer</p>
+        </div>
+      </div>
+      <q class="block mt-7 text-white leading-snug">
+        Customer service is always excellent and very quick turn around. Completely
+        delighted with the simplicity of the purchase and the speed of delivery.
+      </q>
+    </div>
+    <div class="p-8 bg-very-dark-magenta rounded-lg">
+      <div class="flex items-center space-x-6">
+        <img class="rounded-full w-10 h-10" src="images/image-anne.jpg" alt=""/>
+        <div class="leading-5">
+          <p class="text-white">Anne Wallace</p>
+          <p class="mt-0.5 text-soft-pink/80">Verified Buyer</p>
+        </div>
+      </div>
+      <q class="block mt-7 text-white leading-snug">
+        Put an order with this company and can only praise them for the very high
+        standard. Will definitely use them again and recommend them to everyone!
+      </q>
+    </div>
+  </div>
+</div>
+</body>
 </html>
