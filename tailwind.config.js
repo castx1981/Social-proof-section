@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.{html,js}"],
+  content: ["./index.html"],
   theme: {
-    fontFamily: {
-      'sans': ['League Spartan', 'sans-serif'],
-    },
     extend: {
+      fontFamily: {
+        'sans': ['League Spartan', 'sans-serif'],
+      },
       colors: {
         // primary
         'very-dark-magenta': 'hsl(300, 43%, 22%)',
