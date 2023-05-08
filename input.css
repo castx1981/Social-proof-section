@@ -2,18 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .desktop-body-bg {
-        background: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+@layer components {
+    .body-bg {
+        background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
         background-position: left top, right bottom;
         background-repeat: no-repeat, no-repeat;
         background-color: white;
     }
 
-    .mobile-body-bg {
-        background: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
-        background-position: left top, right bottom;
-        background-repeat: no-repeat, no-repeat;
-        background-color: white;
+    .card-container {
+        width: 327px;
+        padding: 82px 0 99px 0;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 1280px) {
+        .body-bg {
+            background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        }
+
+        .card-container {
+            width: 1110px;
+            padding: 118px 0 100px 0;
+            margin: 0 auto;
+        }
+    }
+
+    .rating-item {
+        @apply py-4 w-full flex flex-col items-center space-y-4 bg-light-grayish-magenta rounded-lg xl:py-5 xl:px-8 xl:w-[445px] xl:flex-row xl:space-y-0 xl:space-x-8
+    }
+
+    .rating-item-score {
+        @apply flex space-x-2
+    }
+
+    .rating-item-source {
+        @apply font-bold text-[17px]/4 text-very-dark-magenta
+    }
+
+    .review-item {
+        @apply px-8 pt-10 pb-9 bg-very-dark-magenta rounded-lg xl:w-[350px]
+    }
+
+    .review-item-quote {
+        @apply block mt-6 text-white text-[17px]/[22px] -tracking-[0.303571px]
     }
 }
